@@ -1,0 +1,7 @@
+.git
+__pycache__
+*.pyc
+*.swp
+.DS_Store
+venv
+data/raw/  # Исключаем большие данные
