@@ -1,0 +1,37 @@
+name: GAT_link_prediction
+conda env remove -n gat_mac
+channels:
+  - pytorch
+  - pyg
+  - conda-forge
+  - defaults
+dependencies:
+  # Базовый стек
+  - python=3.10.12
+  - pip=23.3.1  # Явное указание pip
+  - numpy=1.24.3
+  - pandas=2.0.3
+  - scikit-learn=1.3.0
+  - tqdm=4.66.1
+  - jupyter=1.0.0
+
+  # PyTorch с MPS-поддержкой
+  - pytorch=2.1.0
+  - torchvision=0.16.0
+  - torchaudio=2.1.0
+
+  # Графовые библиотеки (через conda где возможно)
+  - pyg=2.4.0
+  - pytorch-scatter=2.1.2
+  - pytorch-sparse=0.6.18
+  - pytorch-cluster=1.6.2
+  - pytorch-spline-conv=1.2.2
+
+  # Пип-пакеты (только то, что недоступно в conda)
+  - pip:
+    - torch-geometric-temporal==0.54.0
+    - networkx==3.1
+    - matplotlib==3.7.2
+    - pyvis==0.3.2
+    - wandb==0.15.12
+    - psutil==5.9.5  # Для мониторинга процессов
